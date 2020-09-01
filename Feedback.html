@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="navbar.css">
+	<script>
+		function validate () {
+			var name = document.getElementById('mobileno').value;
+			if(isNaN(name)||name.length!=10){
+				alert ("Invalid number");
+						return false;
+			}
+			else
+				return true
+
+		}
+	</script>
+</head>
+<body>
+	
+	<nav>
+		<ul>
+		<li><a href="index.html">HOME</a></li>    
+        <li><a href="About.html">About us</a></li>
+        <li><a  class ="menu_active" href="Feedback.html">Feedback</a></li>
+        <li><a href="Contact.html">Contact us</a></li>
+		</ul>
+	</nav>
+	<h1> Feedback Form</h1>
+	<form method="post" onsubmit=" return validate()">
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>
+		<input type="text" placeholder="Firstname" required="">
+		<input type="text" placeholder="Lastname" required="">
+		<input type="text" placeholder="E-mail" required="">
+		<input type="text" placeholder="Mobile number"  id="mobileno" required="">
+		<textarea rows="4" cols="50" name="comment" form="usrform" placeholder="Enter Your Feedback" required=""></textarea>
+		<input type="Submit" >
+
+	</form>
+</body>
+</html>
